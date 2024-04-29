@@ -1,0 +1,38 @@
+Used code for the creation of the ERD diagram:
+
+Titles
+-
+title_id VARCHAR(5) PK
+title VARCHAR(50)
+
+Employees
+-
+emp_no INT PK
+emp_title_id VARCHAR(5) FK >- Titles.title_id
+birth_date DATE
+first_name VARCHAR(50)
+last_name VARCHAR(50)
+sex VARCHAR(1)
+hire_date DATE
+
+Departments
+-
+dept_no VARCHAR(4) PK
+dept_name VARCHAR(50) UNIQUE
+
+Dept_emp
+-
+emp_no INT FK >- Employees.emp_no PK
+dept_no VARCHAR(4) FK >- Departments.dept_no PK
+
+
+Dept_manager
+-
+dept_no VARCHAR(4) FK >- Departments.dept_no PK
+emp_no INT FK -< Employees.emp_no PK
+
+
+Salaries
+-
+emp_no INT FK -< Employees.emp_no
+salary INT
