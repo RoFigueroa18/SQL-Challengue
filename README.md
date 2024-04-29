@@ -1,4 +1,5 @@
 Table_schemata.sql
+
 This file contains SQL commands to manage database tables for a company's employee records. Here’s what it does:
 
 Drops existing tables if they exist to clean up the database. This is useful for resetting the table structures during development or testing.
@@ -12,6 +13,7 @@ salaries records employee salaries, which presumably can change over time (thoug
 
 
 queries.sql
+
 This file includes various SQL queries to retrieve information from the database structured in the previous file:
 
 Employee details and salaries: Retrieves the employee number, last name, first name, sex, and salary for all employees.
